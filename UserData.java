@@ -17,4 +17,10 @@ public class UserData {
         return user;
     }
 
+    @Override
+    public String toString() {
+        return String.format("id: %d Name: %s Surname: %s Year of birth: %d",
+                        id, user.getFirstName(), user.getLastName(), 
+                        user.getBirthYear());
+    }
 }

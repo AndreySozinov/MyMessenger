@@ -23,4 +23,8 @@ public abstract class BaseUser {
     public String getLastName() {
         return lastName;
     }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
 }
