@@ -23,4 +23,9 @@ public class MessageData {
         message.text = text;
         message.update = new Date();
     }
+
+    @Override
+    public String toString() {
+        return String.format("id: %d %s", id, message);
+    }
 }

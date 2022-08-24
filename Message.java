@@ -16,5 +16,11 @@ public class Message {
         this.text = text;
     }
 
-    
+    @Override
+    public String toString() {
+        return String.format("From: %s %s To: %s %s, Date: %s, Text: %s", 
+                    sender.getFirstName(), sender.getLastName(), 
+                    recipient.getFirstName(), recipient.getLastName(), 
+                    createDate, text);
+    }
 }

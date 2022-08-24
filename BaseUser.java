@@ -13,6 +13,14 @@ public abstract class BaseUser {
     }
 
     public BaseUser() {
-        this("guest" + count++, "", 0);
+        this("user" + count++, "", 0);
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 }
