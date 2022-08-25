@@ -1,7 +1,7 @@
 package mymessenger;
 
 public class UserData {
-    private static Long id;
+    private static Long id = 0L;
     BaseUser user;
 
     public UserData(BaseUser user) {
