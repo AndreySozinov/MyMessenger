@@ -11,6 +11,11 @@ public class Moderator extends User implements ModeratorAction{
     }
 
     @Override
+    public int getAccessLevel() {
+        return this.accessLevel;
+    }
+
+    @Override
     public void deleteMsg(Integer id) {
         RepoMsg msg = new RepoMsg();
         msg.deleteById(id);
