@@ -3,8 +3,11 @@ package mymessenger;
 import java.util.List;
 
 public class Moderator extends User implements ModeratorAction{
+    private int accessLevel;
+
     public Moderator(String name, String lastName, int birthYear) {
         super(name, lastName, birthYear);
+        this.accessLevel = 1;
     }
 
     @Override
