@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class MessageData {
     private static int id;
-    Message message;
+    private Message message;
 
     public MessageData(Message message) {
         id++;
@@ -20,8 +20,8 @@ public class MessageData {
     }
     
     public void setText(String text) {
-        message.text = text;
-        message.update = new Date();
+        message.setText(text);
+        message.setUpdate(new Date());
     }
 
     @Override

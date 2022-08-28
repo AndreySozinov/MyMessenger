@@ -1,7 +1,7 @@
 package mymessenger;
 
 public class User extends BaseUser implements UserAction{
-private int accessLevel;
+    private int accessLevel;
 
     public User(String name, String lastName, int birthYear) {
         super(name, lastName, birthYear);

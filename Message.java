@@ -3,17 +3,25 @@ package mymessenger;
 import java.util.Date;
 
 public class Message {
-    BaseUser sender;
-    BaseUser recipient;
-    Date createDate;
-    Date update;
-    String text;
+    private BaseUser sender;
+    private BaseUser recipient;
+    private Date createDate;
+    private Date update;
+    private String text;
 
     public Message(BaseUser sender, BaseUser recipient, String text) {
         this.sender = sender;
         this.recipient = recipient;
         this.createDate = new Date();
         this.text = text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setUpdate(Date update) {
+        this.update = update;
     }
 
     @Override

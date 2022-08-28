@@ -2,7 +2,7 @@ package mymessenger;
 
 public class UserData {
     private static int id = 0;
-    BaseUser user;
+    private BaseUser user;
 
     public UserData(BaseUser user) {
         id++;
