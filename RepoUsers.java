@@ -2,16 +2,16 @@ package mymessenger;
 
 import java.util.List;
 
-public class RepoUsers implements Repository<BaseUser, Long>{
+public class RepoUsers implements Repository<BaseUser, Integer>{
     @Override
-    public Long save(BaseUser user) {
+    public Integer save(BaseUser user) {
         List<UserData> userTable = DataBase.getUserTable();
         userTable.add(new UserData(user));
         return UserData.getId();
-    }
+    } 
 
     @Override
-    public BaseUser findById(Long id) {
+    public BaseUser findById(Integer id) {
         List<UserData> userTable = DataBase.getUserTable();
         for (UserData user : userTable) {
             if (user.getId() == id) {
@@ -22,7 +22,7 @@ public class RepoUsers implements Repository<BaseUser, Long>{
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(Integer id) {
         List<UserData> userTable = DataBase.getUserTable();
         for (UserData user : userTable) {
             if (user.getId() == id) {

@@ -3,7 +3,7 @@ package mymessenger;
 import java.util.Date;
 
 public class MessageData {
-    private static Long id = 0L;
+    private static int id;
     Message message;
 
     public MessageData(Message message) {
@@ -11,7 +11,7 @@ public class MessageData {
         this.message = message;
     }
 
-    public static Long getId() {
+    public static int getId() {
         return id;
     }
 

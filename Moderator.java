@@ -8,7 +8,7 @@ public class Moderator extends User implements ModeratorAction{
     }
 
     @Override
-    public void deleteMsg(Long id) {
+    public void deleteMsg(Integer id) {
         RepoMsg msg = new RepoMsg();
         msg.deleteById(id);
     }

@@ -31,9 +31,10 @@ public class App {
         user01.sendMessage(guest01, "Hello");
         moderator01.sendMessage(guest01, "Log in");
         moderator01.showAllMessages();
-        moderator01.editMessage(3L, "Log in, please");
+        moderator01.editMessage(3, "Log in, please");
+        moderator01.showAllMessages();
         admin01.sendMessage(moderator01, "I delete him");
         admin01.showAllUsers();
-        admin01.deleteUser(1L);
+        admin01.deleteUser(1);
     }
 }

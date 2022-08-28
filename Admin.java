@@ -16,7 +16,7 @@ public class Admin extends Moderator implements AdminAction{
     }
 
     @Override
-    public void deleteUser(Long id) {
+    public void deleteUser(Integer id) {
         List<UserData> userTable = DataBase.getUserTable();
         for (UserData user : userTable) {
             if (user.getId() == id) {

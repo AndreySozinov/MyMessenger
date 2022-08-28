@@ -12,7 +12,7 @@ public class User extends BaseUser implements UserAction{
     }
 
     @Override
-    public void editMessage(Long id, String newText) {
+    public void editMessage(Integer id, String newText) {
         RepoMsg msg = new RepoMsg();
         msg.editMsg(id, newText);
     }

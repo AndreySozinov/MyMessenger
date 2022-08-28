@@ -2,16 +2,16 @@ package mymessenger;
 
 import java.util.List;
 
-public class RepoMsg implements Repository<Message, Long>{
+public class RepoMsg implements Repository<Message, Integer>{
     @Override
-    public Long save(Message msg) {
+    public Integer save(Message msg) {
         List<MessageData> messageTable = DataBase.getMessageTable();
         messageTable.add(new MessageData(msg));
         return MessageData.getId();
     }
 
     @Override
-    public Message findById(Long id) {
+    public Message findById(Integer id) {
         List<MessageData> messageTable = DataBase.getMessageTable();
         for (MessageData msg : messageTable) {
             if (msg.getId() == id) {
@@ -22,7 +22,7 @@ public class RepoMsg implements Repository<Message, Long>{
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(Integer id) {
         List<MessageData> messageTable = DataBase.getMessageTable();
         for (MessageData msg : messageTable) {
             if (msg.getId() == id) {
@@ -31,7 +31,7 @@ public class RepoMsg implements Repository<Message, Long>{
         }
     }
 
-    public void editMsg(Long id, String text) {
+    public void editMsg(Integer id, String text) {
         List<MessageData> messageTable = DataBase.getMessageTable();
         for (MessageData msg : messageTable) {
             if (msg.getId() == id) {

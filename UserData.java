@@ -1,7 +1,7 @@
 package mymessenger;
 
 public class UserData {
-    private static Long id = 0L;
+    private static int id = 0;
     BaseUser user;
 
     public UserData(BaseUser user) {
@@ -9,7 +9,7 @@ public class UserData {
         this.user = user;
     }
 
-    public static Long getId() {
+    public static Integer getId() {
         return id;
     }
 
